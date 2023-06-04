@@ -1,10 +1,11 @@
 #create a function to fetch weather which takes city_name as parameter and uses openweathermap api to fetch weather data
 import requests
+import config
 
 
 def fetch_weather(city_name):
     #openweathermap api url
-    url = "http://api.openweathermap.org/data/2.5/weather?q="+city_name+"&appid=5b7850ce0d3bd9c4dfe3f138275314f6"
+    url = "http://api.openweathermap.org/data/2.5/weather?q="+city_name+"&appid="+config.api_key
     #print(url)
     #fetching data from api
     response = requests.get(url)
